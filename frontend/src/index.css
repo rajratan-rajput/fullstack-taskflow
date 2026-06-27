@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root, [data-theme="light"] {
+  --bg-app: #FAFAFA;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --border-color: #E2E8F0;
+  --border-subtle: #F1F5F9;
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --accent: #0F172A;
+  --accent-hover: #1E293B;
+  --accent-text: #FFFFFF;
+  --ring-color: #0F172A;
+  --card-hover: #F8FAFC;
+}
+
+[data-theme="beige"] {
+  --bg-app: #FBF8F3;
+  --bg-surface: #FFFDF9;
+  --bg-subtle: #F4EFE6;
+  --border-color: #E8E0D5;
+  --border-subtle: #F0EADF;
+  --text-primary: #3D3228;
+  --text-secondary: #7A6C5D;
+  --accent: #92400E;
+  --accent-hover: #78350F;
+  --accent-text: #FFFFFF;
+  --ring-color: #92400E;
+  --card-hover: #FAF5ED;
+}
+
+[data-theme="forest"] {
+  --bg-app: #F2F7F4;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #E4EFE9;
+  --border-color: #CFDFD5;
+  --border-subtle: #E2EDE6;
+  --text-primary: #1A382B;
+  --text-secondary: #4A6B5D;
+  --accent: #166534;
+  --accent-hover: #14532D;
+  --accent-text: #FFFFFF;
+  --ring-color: #166534;
+  --card-hover: #F5FAF7;
+}
+
+[data-theme="dark"] {
+  --bg-app: #0D1117;
+  --bg-surface: #161B22;
+  --bg-subtle: #21262D;
+  --border-color: #30363D;
+  --border-subtle: #21262D;
+  --text-primary: #F0F6FC;
+  --text-secondary: #8B949E;
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-text: #FFFFFF;
+  --ring-color: #38BDF8;
+  --card-hover: #1F242C;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+/* Global 300ms smooth transition for elements */
+div, header, footer, main, button, input, textarea, select, a {
+  transition: background-color 300ms ease, border-color 300ms ease, color 300ms ease, box-shadow 300ms ease;
+}
+
+/* Custom Theme utility classes */
+.bg-app { background-color: var(--bg-app); }
+.bg-surface { background-color: var(--bg-surface); }
+.bg-subtle { background-color: var(--bg-subtle); }
+.border-theme { border-color: var(--border-color); }
+.border-theme-subtle { border-color: var(--border-subtle); }
+.text-theme-primary { color: var(--text-primary); }
+.text-theme-secondary { color: var(--text-secondary); }
+.btn-accent {
+  background-color: var(--accent);
+  color: var(--accent-text);
+}
+.btn-accent:hover {
+  background-color: var(--accent-hover);
+}
